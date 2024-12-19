@@ -1,8 +1,8 @@
 export default {
-  displayName: 'angular-monorepo',
-  preset: '../../jest.preset.js',
+  displayName: 'ui',
+  preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/apps/angular-monorepo',
+  coverageDirectory: '../../../coverage/libs/shared/ui',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

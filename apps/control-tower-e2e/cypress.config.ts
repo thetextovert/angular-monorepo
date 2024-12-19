@@ -7,10 +7,10 @@ export default defineConfig({
     ...nxE2EPreset(__filename, {
       cypressDir: 'src',
       webServerCommands: {
-        default: 'npx nx run angular-monorepo:serve',
-        production: 'npx nx run angular-monorepo:serve-static',
+        default: 'npx nx run control-tower:serve',
+        production: 'npx nx run control-tower:serve-static',
       },
-      ciWebServerCommand: 'npx nx run angular-monorepo:serve-static',
+      ciWebServerCommand: 'npx nx run control-tower:serve-static',
       ciBaseUrl: 'http://localhost:4200',
     }),
     baseUrl: 'http://localhost:4200',
