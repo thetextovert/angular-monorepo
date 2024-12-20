@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import {
   NzTableFilterFn,
@@ -9,7 +9,7 @@ import {
 } from 'ng-zorro-antd/table';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
+
 interface ItemData {
   name: string;
   age: number;
@@ -27,10 +27,10 @@ interface ColumnItem {
 @Component({
   selector: 'lib-table-nz',
   standalone: true,
-  imports: [NzDividerModule, NzTableModule, NzButtonModule, CommonModule,BrowserModule],
+  imports: [NzDividerModule, NzTableModule, NzButtonModule, CommonModule],
   templateUrl: './table.component.html',
   styleUrl: './table.component.scss',
- 
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class TableComponent {
   listOfColumns: ColumnItem[] = [
@@ -107,5 +107,4 @@ export class TableComponent {
     });
     this.resetFilters();
   }
-
 }
